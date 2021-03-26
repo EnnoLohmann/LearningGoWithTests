@@ -1,4 +1,4 @@
-name: Go
+name: Go-Integers
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 defaults:
   run:
-    working-directory: ./hello_world
+    working-directory: ./intgers
 jobs:
   build:
     runs-on: ubuntu-latest
