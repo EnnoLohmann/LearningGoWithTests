@@ -1,0 +1,80 @@
+name: Go-Hello-World
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  hello_world:
+    defaults:
+      run:
+        working-directory: ./hello_world
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Build
+      run: go build
+
+    - name: Test
+      run: go test
+  integers:
+    defaults:
+      run:
+        working-directory: ./integers
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Build
+      run: go build
+
+    - name: Test
+      run: go test
+  iteration:
+    defaults:
+      run:
+        working-directory: ./iteration
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Build
+      run: go build
+
+    - name: Test
+      run: go test
+  arrays_and_slices:
+    defaults:
+      run:
+        working-directory: ./arrays_and_slices
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Build
+      run: go build
+
+    - name: Test
+      run: go test
