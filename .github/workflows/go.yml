@@ -5,11 +5,11 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+defaults:
+  run:
+    working-directory: ./hello_world
 jobs:
   build:
-    env:
-      working-directory: ./hello_world
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
