@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 defaults:
   run:
-    working-directory: ./intgers
+    working-directory: ./integers
 jobs:
   build:
     runs-on: ubuntu-latest
