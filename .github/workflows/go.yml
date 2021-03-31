@@ -97,3 +97,22 @@ jobs:
 
     - name: Test
       run: go test
+
+  pointers_and_errors:
+    defaults:
+      run:
+        working-directory: ./pointers_and_errors
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Build
+      run: go build
+
+    - name: Test
+      run: go test
